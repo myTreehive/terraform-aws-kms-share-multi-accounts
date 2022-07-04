@@ -1,3 +1,4 @@
+# TODO consider to remove root account from locals, and place it in the vars directly if needed.
 locals {
   dest_list_arns   = formatlist("arn:aws:iam::%s:root", var.dest_account_ids)
   source_list_arns = formatlist("arn:aws:iam::%s:root", var.src_account_ids)
