@@ -21,7 +21,8 @@ data "aws_iam_policy_document" "kms-key-policy" {
       "kms:Decrypt",
       "kms:ReEncrypt*",
       "kms:GenerateDataKey*",
-      "kms:DescribeKey"
+      "kms:DescribeKey",
+      "kms:kms:CreateGrant"
     ]
 
     resources = ["*"]
