@@ -38,8 +38,7 @@ data "aws_iam_policy_document" "kms-key-policy" {
     actions = [
       "kms:CreateGrant",
       "kms:ListGrants",
-      "kms:RevokeGrant",
-      "kms:DescribeKey"
+      "kms:RevokeGrant"
     ]
 
     resources = ["*"]
