@@ -1,11 +1,14 @@
-# *Terraform-aws-kms-share-multi-accounts*
-module to create custom kms key and share access to multiple AWS accounts with option to add  particular IAM Roles and Users
+# terraform-aws-kms-share-multi-accounts
+
+The module to create custom kms key and share access to multiple AWS accounts with option to add  particular IAM Roles and Users
+
 ## Sample way of using this module
+
 > There are 2 ways to use this module.
 
 1. Using default policy to create kms key and share to dest accounts
 
-```
+```hcl
 module "kms_sharing" {
   source           = "git@github.com:devops-made-easy/terraform-aws-kms-share-multi-accounts.git"
   version          = "1.0.0"
@@ -16,8 +19,10 @@ module "kms_sharing" {
   src_iam_roles   = ["arn:aws:iam::xxxxxx:role/src_iam_role"](optional)
 }
 ```
-2. Using Custom policy provided to this module 
-```
+
+1. Using Custom policy provided to this module
+
+```hcl
 module "kms_sharing" {
   source           = "git@github.com:devops-made-easy/terraform-aws-kms-share-multi-accounts.git"
   version          = "1.0.0"
@@ -29,6 +34,7 @@ module "kms_sharing" {
   user_policy      = file("${path.module}/xxxx.json.tpl")(optional)
 }
 ```
+
 ## Share the Love
 
 Like this project? Please give it a ★ on  [our GitHub!](https://github.com/devops-made-easy/terraform-aws-kms-share-multi-accounts)(it helps us a lot)
